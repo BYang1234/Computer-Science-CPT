@@ -1,4 +1,4 @@
-player = PVector(400,380)
+frog = PVector(430,357)
 
 def setup():
     size(800,400)
@@ -7,4 +7,5 @@ def draw():
     background(32,32,32)
 #player
     fill(0,206,0)
-    ellipse(player.x,player.y,40,40)
+    rect(frog.x,frog.y,40,40)
+        
