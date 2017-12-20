@@ -1,19 +1,22 @@
-frog = PVector(310,357)
-car_1 = PVector(100, 300)
-car_2 = PVector(-100, 300)
-car_3 = PVector(-300, 300)
-car_4 = PVector(0, 200)
-car_5 = PVector(-200, 200)
-car_6 = PVector(-400, 200)
+frog = PVector(310,657)
+car_1 = PVector(100, 600)
+car_2 = PVector(-100, 600)
+car_3 = PVector(-300, 600)
+car_4 = PVector(0, 500)
+car_5 = PVector(-200, 500)
+car_6 = PVector(-400, 500)
+car_7 = PVector(50, 400)
+car_8 = PVector(-200, 400)
 speed_1 = 1.5
 speed_2 = 2
+speed_3 = 3
 
 key_states = []
 for _ in range(223):
     key_states.append(False)
 
 def setup():
-    size(600,400)
+    size(600,700)
 
 def draw():
     global frog, car_1, car_2, car_3, car_4, car_5, car_6, speed
@@ -69,6 +72,21 @@ def draw():
     rect(car_6.x, car_6.y, 60,40)
     if car_6.x > width:
         car_6.x = 10
+
+#car 7
+    fill(225)
+    car_7.x += speed_3
+    rect(car_7.x, car_7.y, 40,40)
+    if car_7.x > width:
+        car_7.x = 10
+
+#car 8
+    fill(225)
+    car_8.x += speed_3
+    rect(car_8.x, car_8.y, 40,40)
+    if car_8.x > width:
+        car_8.x = 10
+
 
 #movement        
     if key_states[37]:  # left
