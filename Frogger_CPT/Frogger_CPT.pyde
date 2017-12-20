@@ -18,8 +18,8 @@ def draw():
     rect(frog.x,frog.y,40,40)
     if frog.y >= height:
         frog.y = 350
-    # if frog.x >= 600 or frog.x <= 0:
-    #     frog.x = 310
+    if frog.x >= 600 or frog.x <= 0:
+        frog.x = 310
     
 
 #car 1
