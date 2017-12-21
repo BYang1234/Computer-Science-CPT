@@ -7,9 +7,9 @@ car_5 = PVector(-200, 500)
 car_6 = PVector(-400, 500)
 car_7 = PVector(50, 400)
 car_8 = PVector(-200, 400)
-speed_1 = 1.5
+speed_1 = 1.2
 speed_2 = 2
-speed_3 = 3
+speed_3 = 2.5
 
 key_states = []
 for _ in range(223):
