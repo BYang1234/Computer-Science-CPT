@@ -10,7 +10,7 @@ car_8 = PVector(-200, 400)
 speed_1 = 1.2
 speed_2 = 2
 speed_3 = 2.5
-frog_speed = 0
+
 
 key_states = []
 for _ in range(223):
@@ -20,7 +20,7 @@ def setup():
     size(600,700)
 
 def draw():
-    global frog, car_1, car_2, car_3, car_4, car_5, car_6, speed_1, speed_2, speed_3, frog_speed
+    global frog, car_1, car_2, car_3, car_4, car_5, car_6, speed_1, speed_2, speed_3
     background(32,32,32)
 
 #player
