@@ -43,28 +43,32 @@ def draw():
     if car_1.x > width:
         car_1.x = 10
 
-# car 2 
+# car 2
+
     fill(143, 7, 12)
     car_2.x += speed_1
     rect(car_2.x, car_2.y, 60, 40)
     if car_2.x > width:
         car_2.x = 10
 
-# car 3    
+# car 3
+
     fill(143, 7, 12)
     car_3.x += speed_1
     rect(car_3.x, car_3.y, 60, 40)
     if car_3.x > width:
         car_3.x = 10
 
-# car 4 
+# car 4
+
     fill(225, 225, 0)
     car_4.x += speed_2
     rect(car_4.x, car_4.y, 60, 40)
     if car_4.x > width:
         car_4.x = 10
 
-# car 5 
+# car 5
+
     fill(225, 225, 0)
     car_5.x += speed_2
     rect(car_5.x, car_5.y, 60, 40)
@@ -72,6 +76,7 @@ def draw():
         car_5.x = 10
 
 # car 6
+
     fill(225, 225, 0)
     car_6.x += speed_2
     rect(car_6.x, car_6.y, 60, 40)
@@ -79,6 +84,7 @@ def draw():
         car_6.x = 10
 
 # car 7
+
     fill(225)
     car_7.x += speed_3
     rect(car_7.x, car_7.y, 40, 40)
@@ -86,6 +92,7 @@ def draw():
         car_7.x = 10
 
 # car 8
+
     fill(225)
     car_8.x += speed_3
     rect(car_8.x, car_8.y, 40, 40)
@@ -97,18 +104,21 @@ def draw():
     fill(225, 100)
     rect(0, height/2, 600, 40)
 
-# river 
+# river
+
     fill(59, 179, 208)
     rect(0, height/7, 600, 250)
 
-# end zone
+# end zon
+
     fill(225, 100)
     rect(0, height/150, 600, 100)
 
 # intersect
 
 
-# movement        
+# movement
+
     if key_states[37]:  # left
         frog.x -= 2
     elif key_states[39]:  # right
@@ -121,8 +131,8 @@ def draw():
 
 def keyPressed():
     global key_states
-    key_states[keyCode] = True
-    
+    key_states[keyCode] = True 
+
 
 def keyReleased():
     global key_states
