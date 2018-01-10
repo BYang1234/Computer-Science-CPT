@@ -1,4 +1,9 @@
 from Car import Car
+class Car:
+    def __init__(self, x, y, speed):
+        self.location = PVector(x, y)
+        self.speed = speed
+
 
 frog = PVector(310, 657)
 # car_1 = PVector(100, 600)
