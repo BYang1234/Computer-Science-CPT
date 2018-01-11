@@ -1,22 +1,18 @@
 from Car import Car
-class Car:
-    def __init__(self, x, y, speed):
-        self.location = PVector(x, y)
-        self.speed = speed
 
 
 frog = PVector(310, 657)
-# car_1 = PVector(100, 600)
-# car_2 = PVector(-100, 600)
-# car_3 = PVector(-300, 600)
-# car_4 = PVector(0, 500)
-# car_5 = PVector(-200, 500)
-# car_6 = PVector(-400, 500)
-# car_7 = PVector(50, 400)
-# car_8 = PVector(-200, 400)
-# speed_1 = 1.2
-# speed_2 = 2
-# speed_3 = 2.5
+car_1 = PVector(100, 600)
+car_2 = PVector(-100, 600)
+car_3 = PVector(-300, 600)
+car_4 = PVector(0, 500)
+car_5 = PVector(-200, 500)
+car_6 = PVector(-400, 500)
+car_7 = PVector(50, 400)
+car_8 = PVector(-200, 400)
+speed_1 = 1.2
+speed_2 = 2
+speed_3 = 2.5
 
 key_states = []
 for _ in range(223):
@@ -41,69 +37,73 @@ def draw():
     if frog.x <= 0 or frog.x >= 600:
         frog.x = 310
         frog.y = 657
+        
+#writing
+    fill(255,255,0)
+    textSize(30)
+    text("Frogger", 50, 50)
 
-    car_list = [Car(100, 600, 1.2), Car(-100, 600, 1.2), Car(-300, 600, 1.2), Car(200, 500, 2), Car(-200, 500, 2), Car(-400, 500, 2), Car(50, 400, 2.5), Car(-200, 400, 2.5)]
-    for car in car_list:
-        fill(143, 7, 12)
-        car.location.x += car.speed
-        rect(car.location.x, car.location.y, 60, 40)
+    # car_list = [Car(100, 600, 1.2), Car(-100, 600, 1.2), Car(-300, 600, 1.2), Car(200, 500, 2), Car(-200, 500, 2), Car(-400, 500, 2), Car(50, 400, 2.5), Car(-200, 400, 2.5)]
+    # for car in car_list:
+    #     fill(143, 7, 12)
+    #     car.location.x += car.speed
+    #     rect(car.location.x, car.location.y, 60, 40)
     
+# car 1
+    fill(143, 7, 12)
+    car_1.x += speed_1
+    rect(car_1.x, car_1.y, 60, 40)
+    if car_1.x > width:
+        car_1.x = 10
 
-# # car 1
-#     fill(143, 7, 12)
-#     car_1.x += speed_1
-#     rect(car_1.x, car_1.y, 60, 40)
-#     if car_1.x > width:
-#         car_1.x = 10
+# car 2 
+    fill(143, 7, 12)
+    car_2.x += speed_1
+    rect(car_2.x, car_2.y, 60, 40)
+    if car_2.x > width:
+        car_2.x = 10
 
-# # car 2 
-#     fill(143, 7, 12)
-#     car_2.x += speed_1
-#     rect(car_2.x, car_2.y, 60, 40)
-#     if car_2.x > width:
-#         car_2.x = 10
+# car 3    
+    fill(143, 7, 12)
+    car_3.x += speed_1
+    rect(car_3.x, car_3.y, 60, 40)
+    if car_3.x > width:
+        car_3.x = 10
 
-# # car 3    
-#     fill(143, 7, 12)
-#     car_3.x += speed_1
-#     rect(car_3.x, car_3.y, 60, 40)
-#     if car_3.x > width:
-#         car_3.x = 10
+# car 4 
+    fill(225, 225, 0)
+    car_4.x += speed_2
+    rect(car_4.x, car_4.y, 60, 40)
+    if car_4.x > width:
+        car_4.x = 10
 
-# # car 4 
-#     fill(225, 225, 0)
-#     car_4.x += speed_2
-#     rect(car_4.x, car_4.y, 60, 40)
-#     if car_4.x > width:
-#         car_4.x = 10
+# car 5 
+    fill(225, 225, 0)
+    car_5.x += speed_2
+    rect(car_5.x, car_5.y, 60, 40)
+    if car_5.x > width:
+        car_5.x = 10
 
-# # car 5 
-#     fill(225, 225, 0)
-#     car_5.x += speed_2
-#     rect(car_5.x, car_5.y, 60, 40)
-#     if car_5.x > width:
-#         car_5.x = 10
+# car 6
+    fill(225, 225, 0)
+    car_6.x += speed_2
+    rect(car_6.x, car_6.y, 60, 40)
+    if car_6.x > width:
+        car_6.x = 10
 
-# # car 6
-#     fill(225, 225, 0)
-#     car_6.x += speed_2
-#     rect(car_6.x, car_6.y, 60, 40)
-#     if car_6.x > width:
-#         car_6.x = 10
+# car 7
+    fill(225)
+    car_7.x += speed_3
+    rect(car_7.x, car_7.y, 40, 40)
+    if car_7.x > width:
+        car_7.x = 10
 
-# # car 7
-#     fill(225)
-#     car_7.x += speed_3
-#     rect(car_7.x, car_7.y, 40, 40)
-#     if car_7.x > width:
-#         car_7.x = 10
-
-# # car 8
-#     fill(225)
-#     car_8.x += speed_3
-#     rect(car_8.x, car_8.y, 40, 40)
-#     if car_8.x > width:
-#         car_8.x = 10
+# car 8
+    fill(225)
+    car_8.x += speed_3
+    rect(car_8.x, car_8.y, 40, 40)
+    if car_8.x > width:
+        car_8.x = 10
 
 
 # middle safeground
@@ -114,6 +114,10 @@ def draw():
 # end zone
     fill(225, 100)
     rect(0, height/150, 600, 100)
+    if frog.y <= height/150 + 60:
+        fill(255, 51, 51)
+        textSize(100)
+        text("YOU WIN!!", 100, 350)
 
 # intersect
 
