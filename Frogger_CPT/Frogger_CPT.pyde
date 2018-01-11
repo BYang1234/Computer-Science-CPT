@@ -117,7 +117,7 @@ def draw():
     if frog.y <= height/150 + 60:
         fill(255, 51, 51)
         textSize(100)
-        text("YOU WIN!!", 100, 350)
+        text("YOU WIN!!", 90, 350)
 
 # intersect
 
