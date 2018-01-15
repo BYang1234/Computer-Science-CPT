@@ -1,0 +1,25 @@
+class Frog:
+    def __init__(self, x, y):
+        self.location = PVector(x, y)
+        
+    def draw(self):
+        fill(0, 206, 0)
+        rect(self.location.x, self.location.y, 40, 40)
+        
+    def resetGame(self):    
+        if self.location.y >= height:
+            self.location.y = 657
+            self.location.x = 310
+        if self.location.x <= 0 or self.location.x >= 600:
+            self.location.x = 310
+            self.location.y = 657
+            
+    def move(self, key_states):
+        if key_states[37]:  # left
+            self.location.x -= 2
+        elif key_states[39]:  # right
+            self.location.x += 2
+        if key_states[38]:  # up
+            self.location.y -= 2
+        elif key_states[40]:  # down
+            self.location.y += 2
