@@ -1,13 +1,15 @@
 class Car:
-    def __init__(self, x, y, speed):
+    def __init__(self, x, y, speed, width = 60, height = 40):
         self.location = PVector(x, y)
         self.speed = speed
+        self.width = width
+        self.height = height
     
     def move(self):
         self.location.x += self.speed
 
     def draw(self):
         fill(255)
-        rect(self.location.x, self.location.y, 60, 40)
+        rect(self.location.x, self.location.y, self.width, self.height)
         if self.location.x > width:
             self.location.x = 10
