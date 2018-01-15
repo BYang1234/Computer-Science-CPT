@@ -13,6 +13,12 @@ for _ in range(223):
 def setup():
     size(600, 700)
 
+def intersect(car, frog):
+    if car.location.x > (frog.location.x + frog.width) or (car.location.x + car.width) < frog.location.x:
+        return False
+    if car.location.y > (frog.location.y + frog.height) or (car.location.y + car.height) < frog.location.y:
+        return False
+    return True
 
 def draw():
     global car_list, frog
@@ -24,15 +30,19 @@ def draw():
     textSize(30)
     text("Frogger", 50, 50)
 
+#frog and cars
     frog.draw()
     frog.resetGame()
     frog.move(key_states)
     frog.endGame()
 
+
     for car in car_list:
         car.move()
         car.draw()
-        
+        if intersect(car, frog):
+            frog.resetGame()
+
 #end zone
     fill(225, 100)
     rect(0, 0, 600, 100)
