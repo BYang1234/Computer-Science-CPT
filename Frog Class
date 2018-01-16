@@ -7,8 +7,10 @@ class Frog:
     def draw(self):
         fill(0, 206, 0)
         rect(self.location.x, self.location.y, self.width, self.height)
-        
+    
     def resetGame(self):
+        self.location.x = 310
+        self.location.y = 657
         rect(self.location.x, self.location.y, self.width, self.height)
         if self.location.y >= height:
            self.location.y = 657
