@@ -33,20 +33,23 @@ def draw():
 #frog and cars
     frog.draw()
     frog.move(key_states)
-    frog.endGame()
-
+    
+    if frog.location.y >= height:
+        frog.resetGame()
+    if frog.location.x <= 0 or frog.location.x >= 600:
+        frog.resetGame()    
 
     for car in car_list:
         car.move()
         car.draw()
         if intersect(car, frog):
             frog.resetGame()
-            
-    if frog.location.y >= height:
-        frog.resetGame()
-    if frog.location.x <= 0 or frog.location.x >= 600:
-           frog.resetGame()
+        if frog.location.y <= 60:
+            frog.endGame()
 
+#Reset game after winning    
+        if mousePressed == True:
+            frog.resetGame()                
 #end zone
     fill(225, 100)
     rect(0, 0, 600, 100)
@@ -60,3 +63,4 @@ def keyPressed():
 def keyReleased():
     global key_states
     key_states[keyCode] = False
+    
