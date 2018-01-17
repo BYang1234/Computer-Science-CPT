@@ -2,7 +2,7 @@ from Car import Car
 from Frog import Frog
 
 
-car_list = [Car(100, 600, 1.2), Car(-100, 600, 1.2), Car(-300, 600, 1.2), Car(0, 500, 2), Car(-200, 500, 2), Car(-400, 500, 2), Car(50, 400, 2.75), Car(-200, 400, 2.75), Car(0, 300, 2.25), Car(-300, 300, 2.25), Car(100, 200, 1.5), Car(-100, 200, 1.5), Car(-300, 200, 1.5), Car(0, 100, 4), Car(-200, 100, 4)]
+car_list = [Car(100, 600, 1.2), Car(-100, 600, 1.2), Car(-300, 600, 1.2), Car(0, 500, 1.75), Car(-200, 500, 1.75), Car(-400, 500, 1.75), Car(50, 400, 2.75), Car(-200, 400, 2.75), Car(0, 300, 2.25), Car(-300, 300, 2.25), Car(100, 200, 1.5), Car(-100, 200, 1.5), Car(-300, 200, 1.5), Car(0, 100, 4)]
 frog = Frog(310, 657)
 
 key_states = []
@@ -32,7 +32,6 @@ def draw():
 
 #frog and cars
     frog.draw()
-    frog.resetGame()
     frog.move(key_states)
     frog.endGame()
 
@@ -42,6 +41,11 @@ def draw():
         car.draw()
         if intersect(car, frog):
             frog.resetGame()
+            
+    if frog.location.y >= height:
+        frog.resetGame()
+    if frog.location.x <= 0 or frog.location.x >= 600:
+           frog.resetGame()
 
 #end zone
     fill(225, 100)
