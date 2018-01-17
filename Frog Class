@@ -27,4 +27,4 @@ class Frog:
         textSize(100)
         text("YOU WIN!!", 90, 350)
         textSize(25)
-        text("Right click to reset the game!", 150, 450)
+        text("Right click to reset the game!", 150, 475)
