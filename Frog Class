@@ -10,15 +10,7 @@ class Frog:
     
     def resetGame(self):
         self.location.x = 310
-        self.location.y = 657
-        rect(self.location.x, self.location.y, self.width, self.height)
-        if self.location.y >= height:
-           self.location.y = 657
-           self.location.x = 310
-        if self.location.x <= 0 or self.location.x >= 600:
-           self.location.x = 310
-           self.location.y = 657
-            
+        self.location.y = 657    
             
     def move(self, key_states):
         if key_states[37]:  # left
