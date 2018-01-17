@@ -10,8 +10,8 @@ class Frog:
     
     def resetGame(self):
         self.location.x = 310
-        self.location.y = 657    
-            
+        self.location.y = 657
+    
     def move(self, key_states):
         if key_states[37]:  # left
             self.location.x -= 2
@@ -23,7 +23,8 @@ class Frog:
             self.location.y += 2
             
     def endGame(self):
-        if self.location.y <= 60:
-            fill(255, 51, 51)
-            textSize(100)
-            text("YOU WIN!!", 90, 350)
+        fill(255, 51, 51)
+        textSize(100)
+        text("YOU WIN!!", 90, 350)
+        textSize(25)
+        text("Right click to reset the game!", 150, 450)
