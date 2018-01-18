@@ -55,7 +55,7 @@ def draw():
             frog.resetGame()      
                 
 # Instructions
-    if keyPressed == False:
+    if keyPressed == True:
         background(0)
         textSize(25)
         text("Use arrow keys to dodge the oncoming cars!", 0, 50)
