@@ -2,7 +2,7 @@ from Car import Car
 from Frog import Frog
 
 
-car_list = [Car(100, 600, 1.2), Car(-100, 600, 1.2), Car(-300, 600, 1.2), Car(0, 500, 1.75), Car(-200, 500, 1.75), Car(-400, 500, 1.75), Car(50, 400, 2.75), Car(-200, 400, 2.75), Car(0, 300, 2.25), Car(-300, 300, 2.25), Car(100, 200, 1.5), Car(-100, 200, 1.5), Car(-300, 200, 1.5), Car(0, 100, 4)]
+car_list = [Car(100, 600, 1.2), Car(-100, 600, 1.2), Car(-300, 600, 1.2), Car(0, 500, 2), Car(-200, 500, 2), Car(-400, 500, 2), Car(50, 400, 2.75), Car(-200, 400, 2.75), Car(0, 300, 2.25), Car(-300, 300, 2.25), Car(100, 200, 1.5), Car(-100, 200, 1.5), Car(-300, 200, 1.5), Car(0, 100, 4)]
 frog = Frog(310, 657)
 
 key_states = []
@@ -29,6 +29,9 @@ def draw():
     fill(255,255,0)
     textSize(30)
     text("Frogger", 50, 50)
+    fill(255,255,0)
+    textSize(25)
+    text("Press any key to get instructions", 0, 90)
 
 #frog and cars
     frog.draw()
@@ -49,7 +52,14 @@ def draw():
 
 #Reset game after winning    
         if mousePressed == True:
-            frog.resetGame()                
+            frog.resetGame()      
+                
+# Instructions
+    if keyPressed == False:
+        background(0)
+        textSize(25)
+        text("Use arrow keys to dodge the oncoming cars!", 0, 50)
+
 #end zone
     fill(225, 100)
     rect(0, 0, 600, 100)
