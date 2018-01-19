@@ -28,10 +28,10 @@ def draw():
 
 
 # writing
-    fill(255,255,0)
+    fill(255, 255, 0)
     textSize(30)
     text("Frogger", 50, 50)
-    fill(255,255,0)
+    fill(255, 255, 0)
     textSize(25)
     text("Press any key to get instructions", 0, 90)
 
@@ -44,7 +44,6 @@ def draw():
     if frog.location.x <= 0 or frog.location.x >= 600:
         frog.resetGame()    
 
-
     for car in car_list:
         car.move()
         car.draw()
@@ -53,16 +52,13 @@ def draw():
         if frog.location.y <= 60:
             frog.endGame()
 
-
 # Reset game after winning    
         if mousePressed == True:
             frog.resetGame()      
 
-
 # End zone
     fill(225, 100)
     rect(0, 0, 600, 100)
-
 
 
 def keyPressed():
@@ -74,7 +70,7 @@ def keyPressed():
         background(0)
         textSize(25)
         text("Use arrow keys to dodge the oncoming cars!", 0, 50)
-        
+    
     
 def keyReleased():
     global key_states 
