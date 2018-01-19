@@ -68,6 +68,13 @@ def draw():
 def keyPressed():
     global key_states
     key_states[keyCode] = True
+    if key == CODED:
+        pass
+    elif key != CODED:
+        background(0)
+        textSize(25)
+        text("Use arrow keys to dodge the oncoming cars!", 0, 50)
+    
     
 
 def keyReleased():
