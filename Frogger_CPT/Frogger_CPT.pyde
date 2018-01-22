@@ -41,19 +41,18 @@ def draw():
         car.move()
         car.draw()
         if intersect(car, frog):
-            frog.resetGame()            
+            frog.resetGame()
     if frog.location.y >= height:
         frog.resetGame()
     if frog.location.x <= 0 or frog.location.x >= 600:
-        frog.resetGame()           
-# Reset game after winning    
+        frog.resetGame()
+# Reset game after winning
     if mousePressed == True:
-        frog.resetGame()               
+        frog.resetGame()
 
 # end zone
     fill(225, 100)
     rect(0, 0, 600, 100)
-    
 # Instructions
     if draw_instruction_screen == True:
         background(0)
@@ -61,7 +60,7 @@ def draw():
         text("Use arrow keys to dodge the oncoming cars!", 0, 50)
     else:
         pass
-        
+
 
 def keyPressed():
     global key_states, draw_instruction_screen
@@ -69,8 +68,8 @@ def keyPressed():
     if key == CODED:
         pass
     else:
-       draw_instruction_screen = True 
-    
+        draw_instruction_screen = True
+
 
 def keyReleased():
     global key_states, draw_instruction_screen
@@ -78,4 +77,4 @@ def keyReleased():
     if key == CODED:
         pass
     else:
-       draw_instruction_screen = False
+        draw_instruction_screen = False
