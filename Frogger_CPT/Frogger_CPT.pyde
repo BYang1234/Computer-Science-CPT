@@ -56,6 +56,7 @@ def draw():
 # Instructions
     if draw_instruction_screen == True:
         background(0)
+        fill(255)
         textSize(25)
         text("Use arrow keys to dodge the oncoming cars!", 0, 50)
     else:
