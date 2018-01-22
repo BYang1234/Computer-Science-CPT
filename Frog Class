@@ -1,17 +1,17 @@
 class Frog:
-    def __init__(self, x, y, width = 40, height = 40):
+    def __init__(self, x, y, width=40, height=40):
         self.location = PVector(x, y)
         self.width = width
         self.height = height
-        
+
     def draw(self):
         fill(0, 206, 0)
         rect(self.location.x, self.location.y, self.width, self.height)
-    
+
     def resetGame(self):
         self.location.x = 310
         self.location.y = 657
-    
+
     def move(self, key_states):
         if key_states[37]:  # left
             self.location.x -= 2
@@ -21,7 +21,7 @@ class Frog:
             self.location.y -= 2
         elif key_states[40]:  # down
             self.location.y += 2
-            
+
     def endGame(self):
         fill(255, 51, 51)
         textSize(100)
