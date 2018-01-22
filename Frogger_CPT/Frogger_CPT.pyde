@@ -35,7 +35,8 @@ def draw():
 # frog and cars
     frog.draw()
     frog.move(key_states)
-    frog.endGame()
+    if frog.location.y <= 50:
+        frog.endGame()
 
     for car in car_list:
         car.move()
